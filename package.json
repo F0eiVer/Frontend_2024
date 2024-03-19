@@ -12,10 +12,14 @@
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
     "nuxt": "^3.10.3",
+    "radix-vue": "^1.5.2",
+    "sass": "^1.72.0",
+    "scss": "^0.2.4",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
     "font-awesome": "^4.7.0"
   }
 }
