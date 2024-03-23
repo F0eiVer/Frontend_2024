@@ -4,16 +4,18 @@ import { ToolbarButton, ToolbarRoot } from "radix-vue";
 
 <template>
   <header>
-    <img class="logo" src="~/assets/logo@2x.png" alt="logo picture" />
+    <img class="logo" src="~/assets/logo.svg" alt="logo picture" />
 
-    <ul class="menu">
-      <li><a href="#">Реализованные проекты</a></li>
-      <li><a href="#">Новости</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Реализованные проекты</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
 
-    <div class="left">
-      <img class="call" src="~/assets/phone_icon.png" alt="call picture" />
+    <div class="right">
+      <img class="call" src="~/assets/phone_icon.svg" alt="call picture" />
       <a class="phone" href="tel:+79009009090">+7 (900) 900-90-90</a>
 
       <ToolbarRoot class="ToolbarRoot">
@@ -23,15 +25,11 @@ import { ToolbarButton, ToolbarRoot } from "radix-vue";
   </header>
 </template>
 
-<style lang="sass">
-
-=button_appearence($back-color: rgba(37, 71, 65, 1), $border, $border-color)
-  background-color: $back-color
-  border: $border solid $border-color
+<style lang="sass" scoped>
 
 header
   display: flex
-  margin: 24px 88px 24px 88px
+  padding: 24px 88px 24px 88px
   font-size: 16px
   align-items: center
   height: 49px
@@ -58,7 +56,7 @@ header
   font-family: var(--font-text)
   font-weight: 400
 
-.left
+.right
   margin-left: auto
   display: flex
   align-items: center
@@ -69,25 +67,4 @@ header
   margin: 16px 24px 16px 8px
   font-family: var(--font-title)
   font-weight: 400
-
-.ToolbarButton
-  padding: 16px 40px  16px 40px
-  border-radius: 10px
-  color: white
-  +button_appearence(rgba(43, 47, 52, 1), 0px, white)
-  margin: 10px
-
-.ToolbarButton:focus
-  +button_appearence(rgba(37, 71, 65, 1), 2px, rgba(2, 159, 89, 1))
-  padding: 14px 38px  14px 38px
-
-.ToolbarButton:hover:active
-  +button_appearence(rgba(2, 159, 89, 1), 0px, white)
-
-.ToolbarButton:hover
-  +button_appearence(rgba(37, 71, 65, 1), 0px, white)
-  padding: 16px 40px  16px 40px
-
-.ToolbarButton:disabled
-  +button_appearence(rgba(157, 156, 156, 1), 1px, rgba(157, 156, 156, 1))
 </style>

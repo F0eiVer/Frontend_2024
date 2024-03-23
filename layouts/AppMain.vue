@@ -1,5 +1,5 @@
 <script setup></script>
 
-<template></template>
+<template><div>hello</div></template>
 
 <style lang="sass" scoped></style>
