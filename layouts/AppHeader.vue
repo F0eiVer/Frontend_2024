@@ -34,6 +34,7 @@ header
   align-items: center
   height: 49px
 
+
 .logo
   width: 160px
   height: 38px

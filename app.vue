@@ -14,22 +14,30 @@
   --font-title: Montserrat, sans-serif
   --font-text: Open Sans, sans-serif
 
+html, body, #__nuxt, .root
+  height: 100%
+
+#__nuxt
+  display: flex
+  flex-direction: column
+
 =button_appearence($back-color: rgba(37, 71, 65, 1), $border, $border-color)
   background-color: $back-color
   border: $border solid $border-color
+
 
 .ToolbarButton
   padding: 16px 40px  16px 40px
   border-radius: 10px
   color: white
-  +button_appearence(rgba(2, 159, 89, 1), 0px, white)
-  margin: 10px
+  margin: 3px
+  +button_appearence(rgba(2, 159, 89, 1), 2px, rgba(2, 159, 89, 1))
 
 .ToolbarButton:hover:active
   +button_appearence(rgba(43, 47, 52, 1), 2px, rgba(2, 159, 89, 1))
 
 .ToolbarButton:hover
-  +button_appearence(rgba(43, 47, 52, 1), 0px, white)
+  +button_appearence(rgba(43, 47, 52, 1), 2px, rgba(43, 47, 52, 1))
   padding: 16px 40px  16px 40px
 
 .ToolbarButton:disabled

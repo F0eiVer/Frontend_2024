@@ -1,5 +1,13 @@
 <script setup></script>
 
-<template><div>hello</div></template>
+<template>
+  <main>hello</main>
+</template>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+
+main
+  display: flex
+  justify-content: space-between
+  flex: 1 0 auto
+</style>
