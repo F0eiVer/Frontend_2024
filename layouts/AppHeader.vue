@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ToolbarButton, ToolbarRoot } from "radix-vue";
+
+import { give_nav } from "../assets/jsmodules/nav";
+const nav = give_nav();
 </script>
 
 <template>
@@ -8,9 +11,9 @@ import { ToolbarButton, ToolbarRoot } from "radix-vue";
 
     <nav>
       <ul class="menu">
-        <li><a href="#">Реализованные проекты</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li v-for="item in nav">
+          <a href="item.url">{{ item.label }}</a>
+        </li>
       </ul>
     </nav>
 

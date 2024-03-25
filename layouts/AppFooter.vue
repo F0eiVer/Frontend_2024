@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+import { give_nav } from "../assets/jsmodules/nav";
+import { give_contact_info } from "../assets/jsmodules/contact_info";
+const nav = give_nav();
+const contact_info = give_contact_info();
+</script>
 
 <template>
   <footer>
@@ -10,9 +15,9 @@
     <div class="list">
       <nav>
         <ul class="menu">
-          <li><a href="#">Реализованные проекты</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li v-for="item in nav">
+            <a href="item.url">{{ item.label }}</a>
+          </li>
         </ul>
       </nav>
       <a class="bottom_link" href="#">Политика конфиденциальности</a>
@@ -20,38 +25,11 @@
 
     <div class="list">
       <ul class="menu">
-        <li>
-          <a class="contact_info" href="tel:+79009009090">
-            <img
-              class="icon"
-              src="../assets/phone_icon.svg"
-              alt="call picture"
-            />
-            <div class="text">+7 (900) 900-90-90</div></a
-          >
-        </li>
-        <li>
-          <a class="contact_info" href="mailto:info@gmail.com">
-            <img
-              class="icon"
-              src="../assets/email_icon.svg"
-              alt="mail picture"
-            />
-            <div class="text">info@gmail.com</div></a
-          >
-        </li>
-        <li>
-          <a class="contact_info" href="#">
-            <img
-              class="icon"
-              src="../assets/location_icon.svg"
-              alt="location picture"
-            />
-            <div class="text">
-              г. Владивосток <br />
-              ул. Выселковая 49, стр. 3
-            </div></a
-          >
+        <li v-for="item in contact_info">
+          <a class="contact_info" href="item.url"
+            ><img class="icon" :src="item.src" alt="item.alt" />
+            <div class="text">{{ item.label }}</div>
+          </a>
         </li>
       </ul>
 
@@ -67,8 +45,6 @@
 </template>
 
 <style lang="sass" scoped>
-
-
 footer
   display: flex
   font-size: 16px
