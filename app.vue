@@ -1,13 +1,15 @@
 <script setup></script>
 
 <template>
-  <AppHeader />
-  <AppMain />
-  <AppFooter />
+  <div class="wrapper">
+    <AppHeader class="header" />
+    <AppMain class="main" />
+    <AppFooter class="footer" />
+  </div>
 </template>
 
 <style lang="sass">
-
+@use './assets/styles/button'
 @import 'reset-css'
 
 :root
@@ -17,29 +19,14 @@
 html, body, #__nuxt, .root
   height: 100%
 
-#__nuxt
+.wrapper
   display: flex
   flex-direction: column
+  height: 100%
 
-=button_appearence($back-color: rgba(37, 71, 65, 1), $border, $border-color)
-  background-color: $back-color
-  border: $border solid $border-color
+.main
+  flex: 1 0 auto
 
-
-.ToolbarButton
-  padding: 16px 40px  16px 40px
-  border-radius: 10px
-  color: white
-  margin: 3px
-  +button_appearence(rgba(2, 159, 89, 1), 2px, rgba(2, 159, 89, 1))
-
-.ToolbarButton:hover:active
-  +button_appearence(rgba(43, 47, 52, 1), 2px, rgba(2, 159, 89, 1))
-
-.ToolbarButton:hover
-  +button_appearence(rgba(43, 47, 52, 1), 2px, rgba(43, 47, 52, 1))
-  padding: 16px 40px  16px 40px
-
-.ToolbarButton:disabled
-  +button_appearence(rgba(157, 156, 156, 1), 1px, rgba(157, 156, 156, 1))
+.footer
+  flex: 0 0 auto
 </style>

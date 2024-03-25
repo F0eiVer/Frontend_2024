@@ -77,7 +77,6 @@ footer
   height: 246px
   padding: 32px 88px 32px 88px
   background-color: rgba(37, 71, 65, 1)
-  flex: 0 0 auto
 
 .list
   height: 100%
@@ -110,7 +109,6 @@ footer
 .icon
   margin: 0px 10px 0px 0px
   padding: 0
-
 
 .right
   align-items: center

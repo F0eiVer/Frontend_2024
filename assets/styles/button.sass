@@ -1,0 +1,20 @@
+=button_appearence($back-color: rgba(37, 71, 65, 1), $border, $border-color)
+  background-color: $back-color
+  border: $border solid $border-color
+
+.ToolbarButton
+  padding: 16px 40px 16px 40px
+  border-radius: 10px
+  color: white
+  margin: 3px
+  +button_appearence(rgba(2, 159, 89, 1), 2px, rgba(2, 159, 89, 1))
+
+.ToolbarButton:hover:active
+  +button_appearence(rgba(43, 47, 52, 1), 2px, rgba(2, 159, 89, 1))
+
+.ToolbarButton:hover
+  +button_appearence(rgba(43, 47, 52, 1), 2px, rgba(43, 47, 52, 1))
+  padding: 16px 40px 16px 40px
+
+.ToolbarButton:disabled
+  +button_appearence(rgba(157, 156, 156, 1), 1px, rgba(157, 156, 156, 1))
